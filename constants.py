@@ -339,14 +339,15 @@ ampm = {
     'PM':               'PM',
 }
 
-print 'days'
-print AhoCorasickReplace().update(days).to_regex()
+if __name__ == '__main__':
+    print('days')
+    print(AhoCorasickReplace().update(days).to_regex())
 
-print 'months'
-print AhoCorasickReplace().update(months).to_regex()
+    print('months')
+    print(AhoCorasickReplace().update(months).to_regex())
 
-print 'timezones'
-print AhoCorasickReplace().update(timezones).to_regex()
+    print('timezones')
+    print(AhoCorasickReplace().update(timezones).to_regex())
 
-print 'ampm'
-print AhoCorasickReplace().update(ampm).to_regex()
+    print('ampm')
+    print(AhoCorasickReplace().update(ampm).to_regex())

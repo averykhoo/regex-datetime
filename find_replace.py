@@ -1,12 +1,4 @@
-"""
-given a large bunch (~1e7) of things to find and replace and a folder of data to clean
-and writes the cleaned copied data to the output folder, preserving the relative path
 
-if a tokenizer is used, only matches at token boundaries
-
-possible improvements:
-- is parallel work sharing the trie any faster?
-"""
 import collections
 import datetime
 import fnmatch
@@ -518,7 +510,7 @@ class AhoCorasickReplace(object):
 
         for index, (sequence, replacement) in enumerate(replacements):
             if verbose and (index + 1) % 50000 == 0:
-                print print_str % (index + 1)
+                print(print_str % (index + 1))
             self[sequence] = replacement
         return self
 
@@ -697,16 +689,16 @@ class AhoCorasickReplace(object):
         if os.path.exists(output_path) and not overwrite:
             # skip and log to screen once per thousand files
             if random.random() < 0.001:
-                print u'skipped: %s' % output_path
+                print(u'skipped: %s' % output_path)
         else:
             # recursively make necessary folders
             if not os.path.isdir(os.path.dirname(output_path)):
                 os.makedirs(os.path.dirname(output_path))
 
             # process to temp file
-            print u'=' * 100
-            print u'processing: %s' % input_path
-            print u'input size: %s' % format_bytes(os.path.getsize(input_path))
+            print(u'=' * 100)
+            print(u'processing: %s' % input_path)
+            print(u'input size: %s' % format_bytes(os.path.getsize(input_path)))
             temp_path = output_path + u'.partial'
             t0 = time.time()
 
@@ -715,11 +707,11 @@ class AhoCorasickReplace(object):
                     for output_chunk in self.translate(self._yield_tokens(input_path, encoding=encoding)):
                         f.write(output_chunk)
 
-                print u'    output: %s' % temp_path[:-8]
+                print(u'    output: %s' % temp_path[:-8])
 
             except Exception:
                 os.remove(temp_path)
-                print u'    failed: %s' % temp_path
+                print(u'    failed: %s' % temp_path)
                 raise
 
             # rename to output
@@ -727,7 +719,7 @@ class AhoCorasickReplace(object):
                 os.remove(output_path)
             os.rename(temp_path, output_path)
             t1 = time.time()
-            print u'total time: %s' % format_seconds(t1 - t0)
+            print(u'total time: %s' % format_seconds(t1 - t0))
 
 
 def self_test():
@@ -738,12 +730,12 @@ def self_test():
             set(u'\u180e\u200b\u200c\u200d\u2060\u2800\ufeff')]
 
     except AssertionError:
-        print u'whatever version of re you have has weird unicode spaces'
-        print repr(re.sub(u'\\s', u'', ''.join(UNICODE_SPACES), flags=re.U))
+        print(u'whatever version of re you have has weird unicode spaces')
+        print(repr(re.sub(u'\\s', u'', ''.join(UNICODE_SPACES), flags=re.U)))
         raise
     except TypeError:
-        print u'gotta use python 2.7'
-        print u'#python2.7 use_gazeteer.py'
+        print(u'gotta use python 2.7')
+        print(u'#python2.7 use_gazeteer.py')
         raise
 
     # feed in a list of tuples
@@ -835,10 +827,10 @@ if __name__ == '__main__':
 
     # you can use a generator for the mapping to save memory space
     mapping = [(line.split()[0], line.split()[-1][::-1]) for line in yield_lines(u'new 1.txt')]
-    print u'%d pairs of replacements' % len(mapping)
+    print(u'%d pairs of replacements' % len(mapping))
 
     # parse mapping list into trie with a tokenizer
-    print u'parse map to trie...'
+    print(u'parse map to trie...')
     t_init = datetime.datetime.now()
     m_init = psutil.virtual_memory().used
 
@@ -853,12 +845,12 @@ if __name__ == '__main__':
 
     m_end = psutil.virtual_memory().used
     t_end = datetime.datetime.now()
-    print u'parse completed!', format_seconds((t_end - t_init).total_seconds())
-    print format_bytes(m_end - m_init)
+    print(u'parse completed!', format_seconds((t_end - t_init).total_seconds()))
+    print(format_bytes(m_end - m_init))
 
     # start timer
     t_init = datetime.datetime.now()
-    print u'processing start...', t_init
+    print(u'processing start...', t_init)
 
     # process everything using the same tokenizer
     for path in crawl(input_folder, file_name_pattern):
@@ -868,19 +860,19 @@ if __name__ == '__main__':
 
     # stop timer
     t_end = datetime.datetime.now()
-    print u''
-    print u'processing complete!', t_end
-    print u'processing total time:', format_seconds((t_end - t_init).total_seconds())
-    print u'processing total time:', (t_end - t_init)
+    print(u'')
+    print(u'processing complete!', t_end)
+    print(u'processing total time:', format_seconds((t_end - t_init).total_seconds()))
+    print(u'processing total time:', (t_end - t_init))
 
     # just find all matches, don't replace
     t = time.time()
     with io.open(u'new 1.txt', mode='r', encoding='utf8') as f:
         content = f.read()
     for i, match in enumerate(trie.find_all(content)):
-        print i, match
-    print format_seconds(time.time() - t)
+        print(i, match)
+    print(format_seconds(time.time() - t))
 
     # create regex
-    print trie2.to_regex()
+    print(trie2.to_regex())
 
