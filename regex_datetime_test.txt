@@ -1,0 +1,142 @@
+# dd mm YYYY
+29-03-2018
+29/3/2018
+29\03\2018
+29.3.2018
+29 03 2018
+29032018
+
+# dd mm yy
+29-03-18
+29/3/18
+29\03\18
+29.3.18
+
+# dd mmm YYYY
+29march2018
+29 mar 2018
+29/mar/2018
+29\mar\2018
+29-Mar-2018
+29.Mar.2018
+29-MAR 2018
+29 march 2018
+29th March, 2018
+
+# dd mmm yy
+29mar18
+29/mar/18
+29\mar\18
+29-Mar-18
+29-MAR 18
+29MAR '18
+29.MAR.18
+
+# mm dd YYYY
+03-29-2018
+03/29/2018
+03\29\2018
+03 29 2018
+03292018
+
+# mm dd yy
+03-29-18
+03/29/18
+03\29\18
+03.29.18
+
+# mmm dd YYYY
+march-29 2018
+mar 29 2018
+mar/29/2018
+mar\29\2018
+Mar-29-2018
+MAR-29 2018
+march 29 2018
+March 29th, 2018
+
+# mmm dd yy
+mar29 18
+mar/29/18
+mar\29\18
+Mar-29-18
+MAR-29 18
+
+# YYYY mm dd
+2018-03-29
+2018/03/29
+2018\03\29
+2018 03 29
+20180329
+
+# yy mm dd
+18-03-29
+18/03/29
+18\03\29
+
+# YYYY mmm dd
+2018 march-29
+2018mar-29
+2018/mar/29
+2018\mar\29
+2018-Mar-29
+2018MAR29
+2018 March 29th
+
+# yy mmm dd
+18 mar29
+18/mar/29
+18\mar\29
+18-Mar-29
+18 MAR-29
+
+# times
+14:00SGT
+9am EST
+24:00:00mn GMT
+1212hrs
+1234h sgt
+19:12 hr gmt
+1111pm
+
+# https://en.wikipedia.org/wiki/Date_format_by_country
+1996-04-22
+22 April 1996
+April 22, 1996
+1996-04-22
+1996.04.22
+1996/04/22
+22.04.1996
+22/04/1996
+22-04-1996
+22 April 1996
+04/22/1996
+April 22, 1996
+
+# http://javatechniques.com/blog/dateformat-and-simpledateformat-examples/
+Tues Dec - 8th
+Nov 04th
+Nov 04 2003
+20:14:11 EST
+11/4/03
+8:14 PM
+8:14:11 PM
+Nov 4, 2003
+8:14:11 PM
+8:14 PM
+8:14:11 PM
+8:14:11 PM EST
+11/4/03
+8:14 PM
+Nov 4, 2003
+8:14 PM
+November 4, 2003
+8:14:11 PM EST
+
+# others
+8-mar '93
+April 12 - 23
+may '99
+aaaaaaaaaaaaaaaaaaaaaaaaaaaa march 21st 2015 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+2.11.11.11
