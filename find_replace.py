@@ -12,79 +12,79 @@ import time
 
 import psutil
 
-PUNCTUATION = set(u'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
-NUMBERS = set(u'1234567890')
-ALPHABET = set(u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+PUNCTUATION = set('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
+NUMBERS = set('1234567890')
+ALPHABET = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
 
 UNPRINTABLE_CHARS = {
-    u'\u0000',  # null
-    u'\u0001',  # start of heading
-    u'\u0002',  # start of text
-    u'\u0003',  # end of text
-    u'\u0004',  # end of transmission
-    u'\u0005',  # enquiry
-    u'\u0006',  # acknowledge (ACK)
-    u'\u0007',  # bell (also used as bullet point)
-    u'\u0008',  # backspace
-    u'\u000e',  # shift out
-    u'\u000f',  # shift in
-    u'\u0010',  # data link escape
-    u'\u0011',  # device control 1
-    u'\u0012',  # device control 2
-    u'\u0013',  # device control 3
-    u'\u0014',  # device control 4
-    u'\u0015',  # negative acknowledge
-    u'\u0016',  # synchronous idle
-    u'\u0017',  # end of transmission block
-    u'\u0018',  # cancel
-    u'\u0019',  # end of medium
-    u'\u001a',  # substitute
-    u'\u001b',  # escape (ESC)
-    u'\u007f',  # delete (DEL)
-    u'\ufffd',  # unicode replacement char
+    '\u0000',  # null
+    '\u0001',  # start of heading
+    '\u0002',  # start of text
+    '\u0003',  # end of text
+    '\u0004',  # end of transmission
+    '\u0005',  # enquiry
+    '\u0006',  # acknowledge (ACK)
+    '\u0007',  # bell (also used as bullet point)
+    '\u0008',  # backspace
+    '\u000e',  # shift out
+    '\u000f',  # shift in
+    '\u0010',  # data link escape
+    '\u0011',  # device control 1
+    '\u0012',  # device control 2
+    '\u0013',  # device control 3
+    '\u0014',  # device control 4
+    '\u0015',  # negative acknowledge
+    '\u0016',  # synchronous idle
+    '\u0017',  # end of transmission block
+    '\u0018',  # cancel
+    '\u0019',  # end of medium
+    '\u001a',  # substitute
+    '\u001b',  # escape (ESC)
+    '\u007f',  # delete (DEL)
+    '\ufffd',  # unicode replacement char
 }
 
 UNICODE_SPACES = {
-    u'\u0009',  # horizontal tab == '\t'
-    u'\u000a',  # line feed (new line) == '\n'
-    u'\u000b',  # vertical tab == '\v'
-    u'\u000c',  # form feed (new page)
-    u'\u000d',  # carriage return == '\r'
-    u'\u001c',  # file separator == '\f'
-    u'\u001d',  # group separator
-    u'\u001e',  # record separator
-    u'\u001f',  # unit separator
-    u'\u0020',  # space == ' '
-    u'\u0085',  # next line
-    u'\u00a0',  # non-breaking space
-    u'\u1680',  # ogham space
-    u'\u180e',  # mongolian vowel separator
-    u'\u200b',  # zero width space
-    u'\u200c',  # zero width non-joiner
-    u'\u200d',  # zero width joiner
-    u'\u2000',  # en quad
-    u'\u2001',  # em quad
-    u'\u2002',  # en space
-    u'\u2003',  # em space
-    u'\u2004',  # 3/em space
-    u'\u2005',  # 4/em space
-    u'\u2006',  # 6/em space
-    u'\u2007',  # figure space
-    u'\u2008',  # punctuation space
-    u'\u2009',  # thin space
-    u'\u200a',  # hair space
-    u'\u2028',  # line separator
-    u'\u2029',  # paragraph separator
-    u'\u202f',  # narrow non-breaking space
-    u'\u205f',  # medium mathematical space
-    u'\u2060',  # word joiner
-    u'\u2800',  # braille blank
-    u'\u3000',  # ideographic space
-    u'\ufeff',  # zero width non-breaking space (also byte order mark)
+    '\u0009',  # horizontal tab == '\t'
+    '\u000a',  # line feed (new line) == '\n'
+    '\u000b',  # vertical tab == '\v'
+    '\u000c',  # form feed (new page)
+    '\u000d',  # carriage return == '\r'
+    '\u001c',  # file separator == '\f'
+    '\u001d',  # group separator
+    '\u001e',  # record separator
+    '\u001f',  # unit separator
+    '\u0020',  # space == ' '
+    '\u0085',  # next line
+    '\u00a0',  # non-breaking space
+    '\u1680',  # ogham space
+    '\u180e',  # mongolian vowel separator
+    '\u200b',  # zero width space
+    '\u200c',  # zero width non-joiner
+    '\u200d',  # zero width joiner
+    '\u2000',  # en quad
+    '\u2001',  # em quad
+    '\u2002',  # en space
+    '\u2003',  # em space
+    '\u2004',  # 3/em space
+    '\u2005',  # 4/em space
+    '\u2006',  # 6/em space
+    '\u2007',  # figure space
+    '\u2008',  # punctuation space
+    '\u2009',  # thin space
+    '\u200a',  # hair space
+    '\u2028',  # line separator
+    '\u2029',  # paragraph separator
+    '\u202f',  # narrow non-breaking space
+    '\u205f',  # medium mathematical space
+    '\u2060',  # word joiner
+    '\u2800',  # braille blank
+    '\u3000',  # ideographic space
+    '\ufeff',  # zero width non-breaking space (also byte order mark)
 }
 
 
-def crawl(top=u'.', pattern=u'*'):
+def crawl(top='.', pattern='*'):
     for potential_path in glob.glob(os.path.abspath(top)):
         if os.path.isdir(potential_path):
             for path, dir_list, file_list in os.walk(potential_path):
@@ -103,15 +103,15 @@ def format_bytes(num):
     """
     num = abs(num)
     if num == 0:
-        return u'0 Bytes'
+        return '0 Bytes'
     elif num == 1:
-        return u'1 Byte'
+        return '1 Byte'
     unit = 0
     while num >= 1024 and unit < 8:
         num /= 1024.0
         unit += 1
-    unit = [u'Bytes', u'KiB', u'MiB', u'GiB', u'TiB', u'PiB', u'EiB', u'ZiB', u'YiB'][unit]
-    return (u'%.2f %s' if num % 1 else u'%d %s') % (num, unit)
+    unit = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'][unit]
+    return ('%.2f %s' if num % 1 else '%d %s') % (num, unit)
 
 
 def format_seconds(num):
@@ -122,19 +122,19 @@ def format_seconds(num):
     """
     num = abs(num)
     if num == 0:
-        return u'0 seconds'
+        return '0 seconds'
     elif num == 1:
-        return u'1 second'
+        return '1 second'
     if num < 1:
         # display 2 significant figures worth of decimals
-        return (u'%%0.%df seconds' % (1 - int(math.floor(math.log10(abs(num)))))) % num
+        return ('%%0.%df seconds' % (1 - int(math.floor(math.log10(abs(num)))))) % num
     unit = 0
     denominators = [60.0, 60.0, 24.0, 7.0]
     while num >= denominators[unit] and unit < 4:
         num /= denominators[unit]
         unit += 1
-    unit = [u'seconds', u'minutes', u'hours', u'days', u'weeks'][unit]
-    return (u'%.2f %s' if num % 1 else u'%d %s') % (num, unit[:-1] if num == 1 else unit)
+    unit = ['seconds', 'minutes', 'hours', 'days', 'weeks'][unit]
+    return ('%.2f %s' if num % 1 else '%d %s') % (num, unit[:-1] if num == 1 else unit)
 
 
 def char_group_tokenize(text, token_max_len=65535):
@@ -152,10 +152,10 @@ def char_group_tokenize(text, token_max_len=65535):
     alphabet = ALPHABET
 
     # init
-    is_space = u''
+    is_space = ''
     is_num = False
     is_alpha = False
-    temp = u''
+    temp = ''
 
     # main loop over all text
     for char in text:
@@ -168,7 +168,7 @@ def char_group_tokenize(text, token_max_len=65535):
                 if temp:
                     yield temp
                 temp = char
-                is_space = u''
+                is_space = ''
                 is_alpha = True
                 is_num = False
 
@@ -180,7 +180,7 @@ def char_group_tokenize(text, token_max_len=65535):
                 if temp:
                     yield temp
                 temp = char
-                is_space = u''
+                is_space = ''
                 is_alpha = False
                 is_num = True
 
@@ -200,7 +200,7 @@ def char_group_tokenize(text, token_max_len=65535):
             if temp:
                 yield temp
             yield char
-            temp = is_space = u''
+            temp = is_space = ''
             is_alpha = False
             is_num = False
 
@@ -209,7 +209,7 @@ def char_group_tokenize(text, token_max_len=65535):
             if temp:
                 yield temp
             temp = char
-            is_space = u''
+            is_space = ''
             is_num = False
             is_alpha = False
 
@@ -240,8 +240,8 @@ def space_tokenize(text, token_max_len=65535, emit_space=True, emit_punc=True):
     spaces = UNICODE_SPACES
 
     # init
-    is_space = u''
-    temp = u''
+    is_space = ''
+    temp = ''
 
     # main loop over all text
     for char in text:
@@ -260,14 +260,14 @@ def space_tokenize(text, token_max_len=65535, emit_space=True, emit_punc=True):
                 yield temp
             if emit_punc:
                 yield char
-            temp = is_space = u''
+            temp = is_space = ''
 
         # 3) first char
         elif is_space:
             if temp:
                 yield temp
             temp = char
-            is_space = u''
+            is_space = ''
 
         # 4) next char
         elif len(temp) < token_max_len:
@@ -445,11 +445,11 @@ class AhoCorasickReplace(object):
                 # character escaping and whitespace handling
                 key = re.escape(key)
                 if fix_fffd:
-                    key = key.replace(u'\ufffd', '.')  # unicode replacement character
+                    key = key.replace('\ufffd', '.')  # unicode replacement character
                 if fix_quotes:
-                    key = key.replace(u'\u2019', u"[\u2019']")  # quote
+                    key = key.replace('\u2019', u"[\u2019']")  # quote
                 if fix_spaces:
-                    key = re.sub(u'\\s', u'\\s', key)
+                    key = re.sub(r'\s', r'\\s', key)
                 _parts[-1].append(key)
 
                 # one level down
@@ -501,12 +501,12 @@ class AhoCorasickReplace(object):
         :type verbose: bool
         """
         if type(replacements) is list:
-            print_str = u'(%%d pairs loaded out of %d)' % len(replacements)
+            print_str = '(%%d pairs loaded out of %d)' % len(replacements)
         elif type(replacements) is dict:
-            print_str = u'(%%d pairs loaded out of %d)' % len(replacements)
+            print_str = '(%%d pairs loaded out of %d)' % len(replacements)
             replacements = replacements.items()
         else:
-            print_str = u'(%d pairs loaded)'
+            print_str = '(%d pairs loaded)'
 
         for index, (sequence, replacement) in enumerate(replacements):
             if verbose and (index + 1) % 50000 == 0:
@@ -555,8 +555,8 @@ class AhoCorasickReplace(object):
                         matches[span_start] = (index + 1, new_head.REPLACEMENT)
 
                         # longest subsequence matching does not allow one match to start within another match
-                        matches_to_remove.update(xrange(span_start + 1, index + 1))
-                        spans_to_remove.update(xrange(span_start + 1, index + 1))
+                        matches_to_remove.update(range(span_start + 1, index + 1))
+                        spans_to_remove.update(range(span_start + 1, index + 1))
 
                 else:
                     # failed to match the current token
@@ -648,8 +648,8 @@ class AhoCorasickReplace(object):
 
                         # longest subsequence matching does not allow one match to start within another match
                         if not allow_overlapping:
-                            matches_to_remove.update(xrange(span_start + 1, index + 1))
-                            spans_to_remove.update(xrange(span_start + 1, index + 1))
+                            matches_to_remove.update(range(span_start + 1, index + 1))
+                            spans_to_remove.update(range(span_start + 1, index + 1))
 
                 else:
                     # failed to match the current token
@@ -689,17 +689,17 @@ class AhoCorasickReplace(object):
         if os.path.exists(output_path) and not overwrite:
             # skip and log to screen once per thousand files
             if random.random() < 0.001:
-                print(u'skipped: %s' % output_path)
+                print('skipped: %s' % output_path)
         else:
             # recursively make necessary folders
             if not os.path.isdir(os.path.dirname(output_path)):
                 os.makedirs(os.path.dirname(output_path))
 
             # process to temp file
-            print(u'=' * 100)
-            print(u'processing: %s' % input_path)
-            print(u'input size: %s' % format_bytes(os.path.getsize(input_path)))
-            temp_path = output_path + u'.partial'
+            print('=' * 100)
+            print('processing: %s' % input_path)
+            print('input size: %s' % format_bytes(os.path.getsize(input_path)))
+            temp_path = output_path + '.partial'
             t0 = time.time()
 
             try:
@@ -707,11 +707,11 @@ class AhoCorasickReplace(object):
                     for output_chunk in self.translate(self._yield_tokens(input_path, encoding=encoding)):
                         f.write(output_chunk)
 
-                print(u'    output: %s' % temp_path[:-8])
+                print('    output: %s' % temp_path[:-8])
 
             except Exception:
                 os.remove(temp_path)
-                print(u'    failed: %s' % temp_path)
+                print('    failed: %s' % temp_path)
                 raise
 
             # rename to output
@@ -719,45 +719,45 @@ class AhoCorasickReplace(object):
                 os.remove(output_path)
             os.rename(temp_path, output_path)
             t1 = time.time()
-            print(u'total time: %s' % format_seconds(t1 - t0))
+            print('total time: %s' % format_seconds(t1 - t0))
 
 
 def self_test():
     # regex self-tests
     try:
-        assert set(re.sub(u'\\s', u'', ''.join(UNICODE_SPACES), flags=re.U)) in [
-            set(u'\u200b\u200c\u200d\u2060\u2800\ufeff'),
-            set(u'\u180e\u200b\u200c\u200d\u2060\u2800\ufeff')]
+        assert set(re.sub('\\s', '', ''.join(UNICODE_SPACES), flags=re.U)) in [
+            set('\u200b\u200c\u200d\u2060\u2800\ufeff'),
+            set('\u180e\u200b\u200c\u200d\u2060\u2800\ufeff')]
 
     except AssertionError:
-        print(u'whatever version of re you have has weird unicode spaces')
-        print(repr(re.sub(u'\\s', u'', ''.join(UNICODE_SPACES), flags=re.U)))
+        print('whatever version of re you have has weird unicode spaces')
+        print(repr(re.sub('\\s', '', ''.join(UNICODE_SPACES), flags=re.U)))
         raise
     except TypeError:
-        print(u'gotta use python 2.7')
-        print(u'#python2.7 use_gazeteer.py')
+        print('gotta use python 2.7')
+        print('#python2.7 use_gazeteer.py')
         raise
 
     # feed in a list of tuples
     _trie = AhoCorasickReplace()
-    _trie.update([(u'asd', u'111'), (u'hjk', u'222'), (u'dfgh', u'3333'), (u'ghjkl;', u'44444'), (u'jkl', u'!')])
-    assert ''.join(_trie.translate(u'erasdfghjkll')) == u'er111fg222ll'
-    assert ''.join(_trie.translate(u'erasdfghjkl;jkl;')) == u'er111f44444!;'
-    assert ''.join(_trie.translate(u'erassdfghjkl;jkl;')) == u'erass3333!;!;'
-    assert ''.join(_trie.translate(u'ersdfghjkll')) == u'ers3333!l'
+    _trie.update([('asd', '111'), ('hjk', '222'), ('dfgh', '3333'), ('ghjkl;', '44444'), ('jkl', '!')])
+    assert ''.join(_trie.translate('erasdfghjkll')) == 'er111fg222ll'
+    assert ''.join(_trie.translate('erasdfghjkl;jkl;')) == 'er111f44444!;'
+    assert ''.join(_trie.translate('erassdfghjkl;jkl;')) == 'erass3333!;!;'
+    assert ''.join(_trie.translate('ersdfghjkll')) == 'ers3333!l'
 
     # test regex
     permutations = []
-    for a in u'abcde':
-        for b in u'abcde':
-            for c in u'abcde':
-                for d in u'abcde':
-                    for e in u'abcde':
+    for a in 'abcde':
+        for b in 'abcde':
+            for c in 'abcde':
+                for d in 'abcde':
+                    for e in 'abcde':
                         permutations.append(a + b + c + d + e)
 
-    for _ in xrange(1000):
+    for _ in range(1000):
         chosen = set()
-        for i in xrange(10):
+        for i in range(10):
             chosen.add(random.choice(permutations))
         _trie = AhoCorasickReplace.fromkeys(chosen)
         r1 = re.compile(_trie.to_regex())
@@ -767,70 +767,70 @@ def self_test():
 
     # feed in a generator
     _trie = AhoCorasickReplace()
-    _trie.update(x.split('.') for x in u'a.b b.c c.d d.a'.split())
-    assert ''.join(_trie.translate(u'acbd')) == u'bdca'
+    _trie.update(x.split('.') for x in 'a.b b.c c.d d.a'.split())
+    assert ''.join(_trie.translate('acbd')) == 'bdca'
 
     # feed in a dict
     _trie = AhoCorasickReplace()
     _trie.update({
-        u'aa':                     u'2',
-        u'aaa':                    u'3',
-        u'aaaaaaaaaaaaaaaaaaaaaa': u'~',
-        u'bbbb':                   u'!',
+        'aa':                     '2',
+        'aaa':                    '3',
+        'aaaaaaaaaaaaaaaaaaaaaa': '~',
+        'bbbb':                   '!',
     })
 
-    assert u'aaaaaaa' not in _trie
-    _trie[u'aaaaaaa'] = '7'
+    assert 'aaaaaaa' not in _trie
+    _trie['aaaaaaa'] = '7'
 
-    assert u''.join(_trie.translate(u'a' * 12 + u'b' + u'a' * 28)) == u'732b~33'
-    assert u''.join(_trie.translate(u'a' * 40)) == u'~773a'
-    assert u''.join(_trie.translate(u'a' * 45)) == u'~~a'
-    assert u''.join(_trie.translate(u'a' * 25)) == u'~3'
-    assert u''.join(_trie.translate(u'a' * 60)) == u'~~772'
+    assert ''.join(_trie.translate('a' * 12 + 'b' + 'a' * 28)) == '732b~33'
+    assert ''.join(_trie.translate('a' * 40)) == '~773a'
+    assert ''.join(_trie.translate('a' * 45)) == '~~a'
+    assert ''.join(_trie.translate('a' * 25)) == '~3'
+    assert ''.join(_trie.translate('a' * 60)) == '~~772'
 
-    del _trie[u'bbbb']
-    assert u'b' not in _trie.head
+    del _trie['bbbb']
+    assert 'b' not in _trie.head
 
-    del _trie[u'aaaaaaa']
-    assert u'aaa' in _trie
-    assert u'aaaaaaa' not in _trie
-    assert u'aaaaaaaaaaaaaaaaaaaaaa' in _trie
+    del _trie['aaaaaaa']
+    assert 'aaa' in _trie
+    assert 'aaaaaaa' not in _trie
+    assert 'aaaaaaaaaaaaaaaaaaaaaa' in _trie
 
-    _trie[u'aaaa'] = 4
+    _trie['aaaa'] = 4
 
-    del _trie[u'aaaaaaaaaaaaaaaaaaaaaa']
-    assert u'aaa' in _trie
-    assert u'aaaaaaa' not in _trie
-    assert u'aaaaaaaaaaaaaaaaaaaaaa' not in _trie
+    del _trie['aaaaaaaaaaaaaaaaaaaaaa']
+    assert 'aaa' in _trie
+    assert 'aaaaaaa' not in _trie
+    assert 'aaaaaaaaaaaaaaaaaaaaaa' not in _trie
 
-    assert len(_trie.head[u'a'][u'a'][u'a']) == 1
-    assert len(_trie.head[u'a'][u'a'][u'a'][u'a']) == 0
+    assert len(_trie.head['a']['a']['a']) == 1
+    assert len(_trie.head['a']['a']['a']['a']) == 0
 
-    del _trie[u'aaa':u'bbb']
-    assert _trie.to_regex() == u'aa'
+    del _trie['aaa':'bbb']
+    assert _trie.to_regex() == 'aa'
 
-    _trie = AhoCorasickReplace.fromkeys(u'mad gas scar madagascar scare care car career error err are'.split())
+    _trie = AhoCorasickReplace.fromkeys('mad gas scar madagascar scare care car career error err are'.split())
 
-    test = u'madagascareerror'
-    assert list(_trie.find_all(test)) == [u'madagascar', u'error']
+    test = 'madagascareerror'
+    assert list(_trie.find_all(test)) == ['madagascar', 'error']
     assert list(_trie.find_all(test, True)) == \
-           [u'mad', u'gas', u'madagascar', u'scar', u'car', u'scare', u'care', u'are', u'career', u'err', u'error']
+           ['mad', 'gas', 'madagascar', 'scar', 'car', 'scare', 'care', 'are', 'career', 'err', 'error']
 
 
 if __name__ == '__main__':
     self_test()
 
     # define input/output
-    input_folder = os.path.abspath(u'./regex_datetime')
-    output_folder = os.path.abspath(u'./temp')
-    file_name_pattern = u'*'
+    input_folder = os.path.abspath('./regex_datetime')
+    output_folder = os.path.abspath('./temp')
+    file_name_pattern = '*'
 
     # you can use a generator for the mapping to save memory space
-    mapping = [(line.split()[0], line.split()[-1][::-1]) for line in yield_lines(u'new 1.txt')]
-    print(u'%d pairs of replacements' % len(mapping))
+    mapping = [(line.split()[0], line.split()[-1][::-1]) for line in yield_lines('new 1.txt')]
+    print('%d pairs of replacements' % len(mapping))
 
     # parse mapping list into trie with a tokenizer
-    print(u'parse map to trie...')
+    print('parse map to trie...')
     t_init = datetime.datetime.now()
     m_init = psutil.virtual_memory().used
 
@@ -845,12 +845,12 @@ if __name__ == '__main__':
 
     m_end = psutil.virtual_memory().used
     t_end = datetime.datetime.now()
-    print(u'parse completed!', format_seconds((t_end - t_init).total_seconds()))
+    print('parse completed!', format_seconds((t_end - t_init).total_seconds()))
     print(format_bytes(m_end - m_init))
 
     # start timer
     t_init = datetime.datetime.now()
-    print(u'processing start...', t_init)
+    print('processing start...', t_init)
 
     # process everything using the same tokenizer
     for path in crawl(input_folder, file_name_pattern):
@@ -860,14 +860,14 @@ if __name__ == '__main__':
 
     # stop timer
     t_end = datetime.datetime.now()
-    print(u'')
-    print(u'processing complete!', t_end)
-    print(u'processing total time:', format_seconds((t_end - t_init).total_seconds()))
-    print(u'processing total time:', (t_end - t_init))
+    print('')
+    print('processing complete!', t_end)
+    print('processing total time:', format_seconds((t_end - t_init).total_seconds()))
+    print('processing total time:', (t_end - t_init))
 
     # just find all matches, don't replace
     t = time.time()
-    with io.open(u'new 1.txt', mode='r', encoding='utf8') as f:
+    with io.open('new 1.txt', mode='r', encoding='utf8') as f:
         content = f.read()
     for i, match in enumerate(trie.find_all(content)):
         print(i, match)
