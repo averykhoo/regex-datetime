@@ -327,6 +327,7 @@ ampm = {
     'H':                'HRS',
     'HR':               'HRS',
     'HRS':              'HRS',
+    'HOURS':            'HRS',
     'A. M.':            'AM',
     'A.M.':             'AM',
     'A.M':              'AM',
