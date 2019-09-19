@@ -1,15 +1,14 @@
-
 import collections
 import datetime
 import fnmatch
 import glob
 import io
-import math
 import os
 import random
 import re
 import time
 
+import math
 import psutil
 
 PUNCTUATION = set('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
@@ -449,7 +448,7 @@ class AhoCorasickReplace(object):
                 if fix_quotes:
                     key = key.replace('\u2019', u"[\u2019']")  # quote
                 if fix_spaces:
-                    key = re.sub(r'\s', r'\\s', key)
+                    key = re.sub(r'\s', r'\\\\s', key).replace(r'\\\s', r'\s')  # weird bug
                 _parts[-1].append(key)
 
                 # one level down
@@ -477,7 +476,7 @@ class AhoCorasickReplace(object):
         # simplify single-char option groups
         re_pattern = re.sub(r'\(\?:(\\?.)(?:\|(\\?.))(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?'
                             r'(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?(?:\|(\\?.))?\)',
-                            lambda x: '[%s]'%(''.join(y for y in x.groups() if y is not None)), re_pattern)
+                            lambda x: '[%s]' % (''.join(y for y in x.groups() if y is not None)), re_pattern)
         return re_pattern
 
     def keys(self):
@@ -875,4 +874,3 @@ if __name__ == '__main__':
 
     # create regex
     print(trie2.to_regex())
-
