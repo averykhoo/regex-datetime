@@ -210,7 +210,7 @@ HEADERS = ['PATH',
            'START',
            'END',
            'MATCH_LEN',
-           'LINE_LEN',
+           'NORM_LINE_LEN',
            'CONTEXT',
            ]
 
@@ -220,46 +220,61 @@ def parse_txt(path):
         return os.path.basename(path), f.readlines()
 
 
-def regex_file(path, parser=parse_txt, longest=True, context_max_len=999):
+def regex_text(text, longest=True, context_max_len=999):
+    # join multiple spaces, convert tabs, strip leading/trailing whitespace
+    text = ' '.join(text.split())
+    matches = []
+
+    for regex_label, regex_obj in REGEX_COMPILED.items():
+        for m in regex_obj.finditer(text):
+
+            context_start = max(0, (m.start() + m.end() - context_max_len) // 2)
+            context_end = min(len(text), context_start + context_max_len)
+
+            context_str = text[context_start:context_end]
+
+            if context_start != 0:
+                context_str = '\u2026' + context_str[1:]
+            if context_end != len(text):
+                context_str = context_str[:-1] + '\u2026'  # this is the `...` character
+
+            matches.append({'REGEX_LABEL':   regex_label,
+                            'MATCH':         m.group(),
+                            'START':         m.start(),
+                            'END':           m.end(),
+                            'MATCH_LEN':     m.end() - m.start(),
+                            'NORM_TEXT_LEN': len(text),
+                            'CONTEXT':       context_str,
+                            })
+
+    # narrow to longest match
+    for match in matches:
+        if not longest or all((other['START'] >= match['START'] and other['END'] <= match['END']) or
+                              other['START'] > match['END'] or
+                              other['END'] < match['START']
+                              for other in matches):
+
+            # don't return emails or urls
+            if match['REGEX_LABEL'] not in {u'eml', 'url', 'dot'}:
+                yield match
+
+
+def regex_file(path, parser=parse_txt):
     path = os.path.abspath(path)
     file_name, file_lines = parser(path)  #
     for line_num, line in enumerate(file_lines):
-
-        # join multiple spaces, convert tabs, strip leading/trailing whitespace
-        line = ' '.join(line.split())
-
-        # find all matches
-        line_matches = []
-        for regex_label, regex_obj in REGEX_COMPILED.items():
-            for m in regex_obj.finditer(line):
-                context_start = max(0, (m.start() + m.end() - context_max_len) // 2)
-                context_end = min(len(line), context_start + context_max_len)
-                context_str = line[context_start:context_end]
-                if context_start != 0:
-                    context_str = '\u2026' + context_str[1:]
-                if context_end != len(line):
-                    context_str = context_str[:-1] + '\u2026'  # this is the `...` character
-                line_matches.append([path,
-                                     file_name,
-                                     regex_label,
-                                     line_num,
-                                     m.group(),
-                                     m.start(),
-                                     m.end(),
-                                     m.end() - m.start(),
-                                     len(line),
-                                     context_str,
-                                     ])
-
-        # narrow to longest match
-        for row in line_matches:
-            if not longest or all(
-                    (other[5] >= row[5] and other[6] <= row[6]) or other[5] > row[6] or other[6] < row[5]
-                    for other in line_matches):
-
-                # don't return emails or urls
-                if row[2] not in {u'eml', 'url', 'dot'}:
-                    yield row
+        for match_info in regex_text(line):
+            yield [path,
+                   file_name,
+                   match_info['REGEX_LABEL'],
+                   line_num,
+                   match_info['MATCH'],
+                   match_info['START'],
+                   match_info['END'],
+                   match_info['MATCH_LEN'],
+                   match_info['NORM_TEXT_LEN'],
+                   match_info['CONTEXT'],
+                   ]
 
 
 if __name__ == '__main__':
