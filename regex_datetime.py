@@ -32,7 +32,7 @@ REGEX_PARTS = {
     'I':       r"(?:1[012]|0?[1-9])",  # 0?1 to 12
     'M':       r"(?:[1-5]\d|0\d)",  # 00 to 59
     'S':       r"(?:6[01]|[0-5]\d)",  # 00 to 61 (leap second)
-    'p':       r'(?:MIDNI(?:GHT|TE)|AFTERNOON|MORNING|NOON|[MN]N|H(?:RS?)?|[AP]\.? ?M\.?)',
+    'p':       r'(?:MIDNI(?:GHT|TE)|AFTERNOON|MORNING|NOON|[MN]N|H(?:(?:OU)?RS?)?|[AP]\.? ?M\.?)',
     'p2':      r'(?:MIDNI(?:GHT|TE)|NOON|[AP]\.? ?M\.?)',
     'Z':       r"(?:A(?:C(?:DT|ST|T|WST)|DT|E(?:DT|ST)|FT|K(?:DT|ST)|M(?:ST|T)|RT|ST|WST"
                r"|Z(?:O(?:ST|T)|T))|B(?:DT|I(?:OT|T)|OT|R(?:ST|T)|ST|TT)|C(?:AT|CT|DT|E("
