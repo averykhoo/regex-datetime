@@ -8,9 +8,6 @@ use regex to find datetimes in text
 -   run `regex_datetime.py` to find dates (like 2018-01-01 or 12th Oct 2018)
     -   open the resulting csv to find the hits
 -   supports dates from 1940 to 2039 (regex can be edited)
--   you can use dateutil (or arrow or moment or maya or delorean or dateparser)
 
-
-## Todo
--   find month-year (january 2019)
--   parse into iso8601
+-   datetime parsed via dateutil 
+    -   not super accurate, maybe i should try `arrow`/`moment`/`maya`/`delorean`/`dateparser`
