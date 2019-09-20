@@ -1,5 +1,5 @@
 # regex-datetime
-use regex to find datetimes in text
+use regex (`re`) and `dateutil` to find datetimes in text
 
 ## notes
 -   run `constants.py` to build regex for months/days/etc
