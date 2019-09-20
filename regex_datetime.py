@@ -154,7 +154,7 @@ REGEX_PATTERNS_PARSERS = {
     'YYYY_mmm_dd_3':         r"(?:{Y} ?[-] ?{B} ?[-] ?{d})",
     'YYYY_mmm_dd_4':         r"(?:{Y} ?{B} ?[ -]? ?{d}{th}?)",
 
-    # 1991-Aug-14
+    # 91-Aug-14
     'yy_mmm_dd_1':           r"(?:'?{y} ?/ ?{B} ?/ ?{d})",
     'yy_mmm_dd_2':           r"(?:'?{y} ?\\ ?{B} ?\\ ?{d})",
     'yy_mmm_dd_3':           r"(?:'?{y} ?[-] ?{B} ?[-] ?{d})",
