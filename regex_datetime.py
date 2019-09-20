@@ -2,6 +2,9 @@ import csv
 import io
 import os
 import re
+import warnings
+
+import dateutil.parser
 
 REGEX_PARTS = {
 
@@ -61,7 +64,7 @@ REGEX_PARTS = {
 }
 REGEX_PATTERNS_PARSERS = {
 
-    # 14/8/1991
+    # 14/8/1991  # WARNING! dateutil can parse this wrong
     'dd_mm_YYYY_1':          r"(?:{d}/{m}/{Y})",
     'dd_mm_YYYY_2':          r"(?:{d}\\{m}\\{Y})",
     'dd_mm_YYYY_3':          r"(?:{d}[-]{m}[-]{Y})",
@@ -70,7 +73,7 @@ REGEX_PATTERNS_PARSERS = {
     'dd_mm_YYYY_6':          r"(?:{d} ?{m} ?{Y})",
     'dd_mm_YYYY_7':          r"(?:{dz}{mz}{Y})",
 
-    # 14/8/91
+    # 14/8/91  # WARNING! dateutil can parse this wrong
     'dd_mm_yy_1':            r"(?:{d}/{m}/{y})",
     'dd_mm_yy_2':            r"(?:{d}\\{m}\\{y})",
     'dd_mm_yy_3':            r"(?:{d}[-]{m}[-]{y})",
@@ -123,14 +126,14 @@ REGEX_PATTERNS_PARSERS = {
     'mmm_dd_yy_4':           r"(?:{B} ?[. -]? ?{d}{th}?, '?{y})",
     'mmm_dd_yy_5':           r"(?:{B} ?\. ?{d}{th}? ?\. ?'?{y})",
 
-    # Aug-14
+    # Aug-14  # WARNING! dateutil assumes current year
     'mmm_dd':                r"(?:{B} ?[/\\. -] ?{d}{th}?)",
 
     # # Aug-91
     # 'mmm_yy':                r"(?:{B} ?[/\\. -] ?'{y})",  # too many false positives
 
-    # # August 1991
-    # 'mmm_YYYY':              r"(?:{B} ?[/\\. -] ?{Y})",  # too many non-useful dates
+    # August 1991
+    'mmm_YYYY':              r"(?:{B} ?[/\\. -] ?{Y})",  # many non-useful dates
 
     # 1991-8-14
     'YYYY_mm_dd_1':          r'(?:{Y}/{m}/{d})',
@@ -160,7 +163,7 @@ REGEX_PATTERNS_PARSERS = {
     'yy_mmm_dd_3':           r"(?:'?{y} ?[-] ?{B} ?[-] ?{d})",
     'yy_mmm_dd_4':           r"(?:'?{y} ?{B} ?[ -]? ?{d}{th}?)",
 
-    # # 1991.226 (Aug 14 = day 226 in 1991)
+    # # 1991.226 (Aug 14 = day 226 in 1991)  # dateutil fails
     # 'YYYY_ddd_1':            r"(?:{Y}\.{j})",  # too many random numbers
     # 'YYYY_ddd_2':            r"(?:{Y}[-]{j})",  # too many random numbers
 
@@ -213,6 +216,7 @@ HEADERS = ['PATH',
            'MATCH_LEN',
            'NORM_LINE_LEN',
            'CONTEXT',
+           'PARSED',
            ]
 
 
@@ -239,6 +243,28 @@ def regex_text(text, longest=True, context_max_len=999):
             if context_end != len(text):
                 context_str = context_str[:-1] + '\u2026'  # this is the `...` character
 
+            parsed_date = None
+            try:
+                with warnings.catch_warnings():
+                    warnings.simplefilter('ignore', category=dateutil.parser.UnknownTimezoneWarning)
+
+                    if 'HH' in regex_label:
+                        if 'dd' in regex_label or 'YYYY' in regex_label:
+                            matched_text = re.sub(r'[\\]', '/', m.group())
+                            parsed_date = dateutil.parser.parse(matched_text)
+                        else:
+                            matched_text = re.sub(r'H(?:(?:OU)?RS?)?', '', m.group(), flags=re.I)
+                            matched_text = re.sub(r'MN', r'AM', matched_text, flags=re.I)
+                            matched_text = re.sub(r'NN', r'PM', matched_text, flags=re.I)
+                            matched_text = re.sub(r'(\d)[. ](\d)', r'\1:\2', matched_text)
+                            matched_text = f'2001-01-01 {matched_text}'
+                            parsed_date = dateutil.parser.parse(matched_text).time()
+                    elif 'dd' in regex_label or 'YYYY' in regex_label:
+                        matched_text = re.sub(r'[\\]', '/', m.group())
+                        parsed_date = dateutil.parser.parse(matched_text).date()
+            except ValueError:
+                pass
+
             matches.append({'REGEX_LABEL':   regex_label,
                             'MATCH':         m.group(),
                             'START':         m.start(),
@@ -246,6 +272,7 @@ def regex_text(text, longest=True, context_max_len=999):
                             'MATCH_LEN':     m.end() - m.start(),
                             'NORM_TEXT_LEN': len(text),
                             'CONTEXT':       context_str,
+                            'PARSED':        parsed_date,
                             })
 
     # narrow to longest match
@@ -275,6 +302,7 @@ def regex_file(path, parser=parse_txt):
                    match_info['MATCH_LEN'],
                    match_info['NORM_TEXT_LEN'],
                    match_info['CONTEXT'],
+                   match_info['PARSED'],
                    ]
 
 

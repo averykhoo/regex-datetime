@@ -1,143 +1,150 @@
-PATH,FILE_ID,REGEX_LABEL,LINE_NUM,MATCH,START,END,MATCH_LEN,NORM_LINE_LEN,CONTEXT
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_3,1,29-03-2018,0,10,10,10,29-03-2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_1,2,29/3/2018,0,9,9,9,29/3/2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_2,3,29\03\2018,0,10,10,10,29\03\2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_4,4,29.3.2018,0,9,9,9,29.3.2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_6,5,29 03 2018,0,10,10,10,29 03 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_6,6,29032018,0,8,8,8,29032018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_7,6,29032018,0,8,8,8,29032018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_3,9,29-03-18,0,8,8,8,29-03-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_4,9,29-03-18,0,8,8,8,29-03-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,10,29/3/18,0,7,7,7,29/3/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,10,29/3/18,0,7,7,7,29/3/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_2,11,29\03\18,0,8,8,8,29\03\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_3,11,29\03\18,0,8,8,8,29\03\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_4,12,29.3.18,0,7,7,7,29.3.18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_5,12,29.3.18,0,7,7,7,29.3.18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,15,29march2018,0,11,11,11,29march2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,16,29 mar 2018,0,11,11,11,29 mar 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_1,17,29/mar/2018,0,11,11,11,29/mar/2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_2,18,29\mar\2018,0,11,11,11,29\mar\2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_3,19,29-Mar-2018,0,11,11,11,29-Mar-2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_5,20,29.Mar.2018,0,11,11,11,29.Mar.2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_3,21,29-MAR 2018,0,11,11,11,29-MAR 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,21,29-MAR 2018,0,11,11,11,29-MAR 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,22,29 march 2018,0,13,13,13,29 march 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,23,"29th March, 2018",0,16,16,16,"29th March, 2018"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,26,29mar18,0,7,7,7,29mar18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,26,29mar18,0,7,7,7,29mar18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_1,27,29/mar/18,0,9,9,9,29/mar/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_1,27,29/mar/18,0,9,9,9,29/mar/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_2,28,29\mar\18,0,9,9,9,29\mar\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_2,28,29\mar\18,0,9,9,9,29\mar\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_3,29,29-Mar-18,0,9,9,9,29-Mar-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_3,29,29-Mar-18,0,9,9,9,29-Mar-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,30,29-MAR 18,0,9,9,9,29-MAR 18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,31,29MAR '18,0,9,9,9,29MAR '18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_5,32,29.MAR.18,0,9,9,9,29.MAR.18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_3,35,03-29-2018,0,10,10,10,03-29-2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_1,36,03/29/2018,0,10,10,10,03/29/2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_2,37,03\29\2018,0,10,10,10,03\29\2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_4,38,03 29 2018,0,10,10,10,03 29 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_6,39,03292018,0,8,8,8,03292018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_3,42,03-29-18,0,8,8,8,03-29-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,43,03/29/18,0,8,8,8,03/29/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_2,44,03\29\18,0,8,8,8,03\29\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_4,45,03.29.18,0,8,8,8,03.29.18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,48,march-29 2018,0,13,13,13,march-29 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_1,50,mar/29/2018,0,11,11,11,mar/29/2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_2,51,mar\29\2018,0,11,11,11,mar\29\2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,52,Mar-29-2018,0,11,11,11,Mar-29-2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,53,MAR-29 2018,0,11,11,11,MAR-29 2018
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,55,"March 29th, 2018",0,16,16,16,"March 29th, 2018"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_1,59,mar/29/18,0,9,9,9,mar/29/18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_2,60,mar\29\18,0,9,9,9,mar\29\18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_3,61,Mar-29-18,0,9,9,9,Mar-29-18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,62,MAR-29,0,6,6,9,MAR-29 18
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,65,2018-03-29,0,10,10,10,2018-03-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_1,66,2018/03/29,0,10,10,10,2018/03/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_2,67,2018\03\29,0,10,10,10,2018\03\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_4,68,2018 03 29,0,10,10,10,2018 03 29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_6,69,20180329,0,8,8,8,20180329
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_3,72,18-03-29,0,8,8,8,18-03-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_4,72,18-03-29,0,8,8,8,18-03-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,73,18/03/29,0,8,8,8,18/03/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,73,18/03/29,0,8,8,8,18/03/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_2,74,18\03\29,0,8,8,8,18\03\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_3,74,18\03\29,0,8,8,8,18\03\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,77,2018 march-29,0,13,13,13,2018 march-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,78,2018mar-29,0,10,10,10,2018mar-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_1,79,2018/mar/29,0,11,11,11,2018/mar/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_2,80,2018\mar\29,0,11,11,11,2018\mar\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_3,81,2018-Mar-29,0,11,11,11,2018-Mar-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,82,2018MAR29,0,9,9,9,2018MAR29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,83,2018 March 29th,0,15,15,15,2018 March 29th
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,86,18 mar29,0,8,8,8,18 mar29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,86,18 mar29,0,8,8,8,18 mar29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_1,87,18/mar/29,0,9,9,9,18/mar/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_1,87,18/mar/29,0,9,9,9,18/mar/29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_2,88,18\mar\29,0,9,9,9,18\mar\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_2,88,18\mar\29,0,9,9,9,18\mar\29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_3,89,18-Mar-29,0,9,9,9,18-Mar-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_3,89,18-Mar-29,0,9,9,9,18-Mar-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,90,18 MAR-29,0,9,9,9,18 MAR-29
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,93,14:00SGT,0,8,8,8,14:00SGT
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_pp,94,9am EST,0,7,7,7,9am EST
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,95,24:00:00mn GMT,0,14,14,14,24:00:00mn GMT
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,96,1212hrs,0,7,7,7,1212hrs
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,97,1234h sgt,0,9,9,9,1234h sgt
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,98,19:12 hr gmt,0,12,12,12,19:12 hr gmt
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,98,19:12 hr gmt,0,12,12,12,19:12 hr gmt
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,99,1111pm,0,6,6,6,1111pm
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,102,1996-04-22,0,10,10,10,1996-04-22
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,103,22 April 1996,0,13,13,13,22 April 1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,104,"April 22, 1996",0,14,14,14,"April 22, 1996"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,105,1996-04-22,0,10,10,10,1996-04-22
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_5,106,1996.04.22,0,10,10,10,1996.04.22
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_1,107,1996/04/22,0,10,10,10,1996/04/22
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_4,108,22.04.1996,0,10,10,10,22.04.1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_1,109,22/04/1996,0,10,10,10,22/04/1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_3,110,22-04-1996,0,10,10,10,22-04-1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,111,22 April 1996,0,13,13,13,22 April 1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_1,112,04/22/1996,0,10,10,10,04/22/1996
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,113,"April 22, 1996",0,14,14,14,"April 22, 1996"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,116,Dec - 8th,5,14,9,14,Tues Dec - 8th
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,117,Nov 04th,0,8,8,8,Nov 04th
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,118,Nov 04,0,6,6,11,Nov 04 2003
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,119,20:14:11 EST,0,12,12,12,20:14:11 EST
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,120,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,120,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,120,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,121,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,121,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,122,8:14:11 PM,0,10,10,10,8:14:11 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,123,"Nov 4, 2003",0,11,11,11,"Nov 4, 2003"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,124,8:14:11 PM,0,10,10,10,8:14:11 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,125,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,125,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,126,8:14:11 PM,0,10,10,10,8:14:11 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,127,8:14:11 PM EST,0,14,14,14,8:14:11 PM EST
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,128,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,128,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,128,11/4/03,0,7,7,7,11/4/03
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,129,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,129,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,130,"Nov 4, 2003",0,11,11,11,"Nov 4, 2003"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,131,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,131,8:14 PM,0,7,7,7,8:14 PM
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,132,8.14pm,0,6,6,6,8.14pm
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,133,8 14 pm,0,7,7,7,8 14 pm
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,134,0814 hours,0,10,10,10,0814 hours
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,135,0814HOURS,0,9,9,9,0814HOURS
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,136,0814 hr,0,7,7,7,0814 hr
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,137,0814 HRS,0,8,8,8,0814 HRS
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,138,0814H,0,5,5,5,0814H
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,139,"November 4, 2003",0,16,16,16,"November 4, 2003"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,140,8:14:11 PM EST,0,14,14,14,8:14:11 PM EST
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,143,8-mar '93,0,9,9,9,8-mar '93
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,144,April 12,0,8,8,13,April 12 - 23
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,146,march 21st,29,39,10,78,aaaaaaaaaaaaaaaaaaaaaaaaaaaa march 21st 2015 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,150,12th Oct 2018,8,21,13,21,"Friday, 12th Oct 2018"
-C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm,151,31st Feb,12,20,8,25,there is no 31st Feb 1923
-C:\Users\IA-Intern\Desktop\regex-datetime\README.md,README.md,dd_mmm_YYYY_4,7,12th Oct 2018,60,73,13,74,- run `regex_datetime.py` to find dates (like 2018-01-01 or 12th Oct 2018)
-C:\Users\IA-Intern\Desktop\regex-datetime\README.md,README.md,YYYY_mm_dd_3,7,2018-01-01,46,56,10,74,- run `regex_datetime.py` to find dates (like 2018-01-01 or 12th Oct 2018)
+PATH,FILE_ID,REGEX_LABEL,LINE_NUM,MATCH,START,END,MATCH_LEN,NORM_LINE_LEN,CONTEXT,PARSED
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_3,1,29-03-2018,0,10,10,10,29-03-2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_1,2,29/3/2018,0,9,9,9,29/3/2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_2,3,29\03\2018,0,10,10,10,29\03\2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_4,4,29.3.2018,0,9,9,9,29.3.2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_6,5,29 03 2018,0,10,10,10,29 03 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_6,6,29032018,0,8,8,8,29032018,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_7,6,29032018,0,8,8,8,29032018,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_3,9,29-03-18,0,8,8,8,29-03-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_4,9,29-03-18,0,8,8,8,29-03-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,10,29/3/18,0,7,7,7,29/3/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,10,29/3/18,0,7,7,7,29/3/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_2,11,29\03\18,0,8,8,8,29\03\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_3,11,29\03\18,0,8,8,8,29\03\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_4,12,29.3.18,0,7,7,7,29.3.18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_5,12,29.3.18,0,7,7,7,29.3.18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,15,29march2018,0,11,11,11,29march2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,16,29 mar 2018,0,11,11,11,29 mar 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_1,17,29/mar/2018,0,11,11,11,29/mar/2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_2,18,29\mar\2018,0,11,11,11,29\mar\2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_3,19,29-Mar-2018,0,11,11,11,29-Mar-2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_5,20,29.Mar.2018,0,11,11,11,29.Mar.2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_3,21,29-MAR 2018,0,11,11,11,29-MAR 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,21,29-MAR 2018,0,11,11,11,29-MAR 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,22,29 march 2018,0,13,13,13,29 march 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,23,"29th March, 2018",0,16,16,16,"29th March, 2018",2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,26,29mar18,0,7,7,7,29mar18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,26,29mar18,0,7,7,7,29mar18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_1,27,29/mar/18,0,9,9,9,29/mar/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_1,27,29/mar/18,0,9,9,9,29/mar/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_2,28,29\mar\18,0,9,9,9,29\mar\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_2,28,29\mar\18,0,9,9,9,29\mar\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_3,29,29-Mar-18,0,9,9,9,29-Mar-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_3,29,29-Mar-18,0,9,9,9,29-Mar-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,30,29-MAR 18,0,9,9,9,29-MAR 18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,31,29MAR '18,0,9,9,9,29MAR '18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_5,32,29.MAR.18,0,9,9,9,29.MAR.18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_3,35,03-29-2018,0,10,10,10,03-29-2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_1,36,03/29/2018,0,10,10,10,03/29/2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_2,37,03\29\2018,0,10,10,10,03\29\2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_4,38,03 29 2018,0,10,10,10,03 29 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_6,39,03292018,0,8,8,8,03292018,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_3,42,03-29-18,0,8,8,8,03-29-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,43,03/29/18,0,8,8,8,03/29/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_2,44,03\29\18,0,8,8,8,03\29\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_4,45,03.29.18,0,8,8,8,03.29.18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,48,march-29 2018,0,13,13,13,march-29 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_1,50,mar/29/2018,0,11,11,11,mar/29/2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_2,51,mar\29\2018,0,11,11,11,mar\29\2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,52,Mar-29-2018,0,11,11,11,Mar-29-2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_3,53,MAR-29 2018,0,11,11,11,MAR-29 2018,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,55,"March 29th, 2018",0,16,16,16,"March 29th, 2018",2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_1,59,mar/29/18,0,9,9,9,mar/29/18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_2,60,mar\29\18,0,9,9,9,mar\29\18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_yy_3,61,Mar-29-18,0,9,9,9,Mar-29-18,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,62,MAR-29,0,6,6,9,MAR-29 18,2019-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,65,2018-03-29,0,10,10,10,2018-03-29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_1,66,2018/03/29,0,10,10,10,2018/03/29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_2,67,2018\03\29,0,10,10,10,2018\03\29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_4,68,2018 03 29,0,10,10,10,2018 03 29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_6,69,20180329,0,8,8,8,20180329,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_3,72,18-03-29,0,8,8,8,18-03-29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_4,72,18-03-29,0,8,8,8,18-03-29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,73,18/03/29,0,8,8,8,18/03/29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,73,18/03/29,0,8,8,8,18/03/29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_2,74,18\03\29,0,8,8,8,18\03\29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_3,74,18\03\29,0,8,8,8,18\03\29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,77,2018 march-29,0,13,13,13,2018 march-29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,78,2018mar-29,0,10,10,10,2018mar-29,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_1,79,2018/mar/29,0,11,11,11,2018/mar/29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_2,80,2018\mar\29,0,11,11,11,2018\mar\29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_3,81,2018-Mar-29,0,11,11,11,2018-Mar-29,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,82,2018MAR29,0,9,9,9,2018MAR29,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mmm_dd_4,83,2018 March 29th,0,15,15,15,2018 March 29th,2018-03-29
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,86,18 mar29,0,8,8,8,18 mar29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,86,18 mar29,0,8,8,8,18 mar29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_1,87,18/mar/29,0,9,9,9,18/mar/29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_1,87,18/mar/29,0,9,9,9,18/mar/29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_2,88,18\mar\29,0,9,9,9,18\mar\29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_2,88,18\mar\29,0,9,9,9,18\mar\29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_3,89,18-Mar-29,0,9,9,9,18-Mar-29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_3,89,18-Mar-29,0,9,9,9,18-Mar-29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mmm_dd_4,90,18 MAR-29,0,9,9,9,18 MAR-29,2029-03-18
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,93,14:00SGT,0,8,8,8,14:00SGT,14:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_pp,94,9am EST,0,7,7,7,9am EST,09:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,95,24:00:00mn GMT,0,14,14,14,24:00:00mn GMT,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,96,1212hrs,0,7,7,7,1212hrs,12:12:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,97,1234h sgt,0,9,9,9,1234h sgt,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,98,19:12 hr gmt,0,12,12,12,19:12 hr gmt,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,98,19:12 hr gmt,0,12,12,12,19:12 hr gmt,
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,99,1111pm,0,6,6,6,1111pm,23:11:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,102,1996-04-22,0,10,10,10,1996-04-22,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,103,22 April 1996,0,13,13,13,22 April 1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,104,"April 22, 1996",0,14,14,14,"April 22, 1996",1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_3,105,1996-04-22,0,10,10,10,1996-04-22,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_5,106,1996.04.22,0,10,10,10,1996.04.22,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,YYYY_mm_dd_1,107,1996/04/22,0,10,10,10,1996/04/22,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_4,108,22.04.1996,0,10,10,10,22.04.1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_1,109,22/04/1996,0,10,10,10,22/04/1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_YYYY_3,110,22-04-1996,0,10,10,10,22-04-1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,111,22 April 1996,0,13,13,13,22 April 1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_YYYY_1,112,04/22/1996,0,10,10,10,04/22/1996,1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,113,"April 22, 1996",0,14,14,14,"April 22, 1996",1996-04-22
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,116,Dec - 8th,5,14,9,14,Tues Dec - 8th,2019-12-08
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,117,Nov 04th,0,8,8,8,Nov 04th,2019-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,118,Nov 04,0,6,6,11,Nov 04 2003,2019-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,119,20:14:11 EST,0,12,12,12,20:14:11 EST,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,120,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,120,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,120,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,121,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,121,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,122,8:14:11 PM,0,10,10,10,8:14:11 PM,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,123,"Nov 4, 2003",0,11,11,11,"Nov 4, 2003",2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,124,8:14:11 PM,0,10,10,10,8:14:11 PM,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,125,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,125,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,126,8:14:11 PM,0,10,10,10,8:14:11 PM,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,127,8:14:11 PM EST,0,14,14,14,8:14:11 PM EST,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mm_yy_1,128,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mm_dd_yy_1,128,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,yy_mm_dd_2,128,11/4/03,0,7,7,7,11/4/03,2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,129,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,129,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,130,"Nov 4, 2003",0,11,11,11,"Nov 4, 2003",2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,131,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,131,8:14 PM,0,7,7,7,8:14 PM,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd_YYYY_4,132,"November 4, 2003",0,16,16,16,"November 4, 2003",2003-11-04
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MM_SS,133,8:14:11 PM EST,0,14,14,14,8:14:11 PM EST,20:14:11
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_yy_4,136,8-mar '93,0,9,9,9,8-mar '93,1993-03-08
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,137,April 12,0,8,8,13,April 12 - 23,2019-04-12
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,mmm_dd,139,march 21st,29,39,10,78,aaaaaaaaaaaaaaaaaaaaaaaaaaaa march 21st 2015 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,2019-03-21
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,140,8.14pm,0,6,6,6,8.14pm,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,141,8 14 pm,0,7,7,7,8 14 pm,20:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,142,0814 hours,0,10,10,10,0814 hours,08:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,143,0814HOURS,0,9,9,9,0814HOURS,08:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,144,0814 hr,0,7,7,7,0814 hr,08:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,145,0814 HRS,0,8,8,8,0814 HRS,08:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_2,146,0814H,0,5,5,5,0814H,08:14:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_pp,147,12pm,0,4,4,4,12pm,12:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,148,12:00nn,0,7,7,7,12:00nn,12:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,148,12:00nn,0,7,7,7,12:00nn,12:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_pp,149,12am,0,4,4,4,12am,00:00:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1,150,12:01mn,0,7,7,7,12:01mn,00:01:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,HH_MZ_pp_1b,150,12:01mn,0,7,7,7,12:01mn,00:01:00
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm_YYYY_4,154,12th Oct 2018,8,21,13,21,"Friday, 12th Oct 2018",2018-10-12
+C:\Users\IA-Intern\Desktop\regex-datetime\regex_datetime_test.txt,regex_datetime_test.txt,dd_mmm,155,31st Feb,12,20,8,25,there is no 31st Feb 1923,
+C:\Users\IA-Intern\Desktop\regex-datetime\README.md,README.md,dd_mmm_YYYY_4,7,12th Oct 2018,60,73,13,74,- run `regex_datetime.py` to find dates (like 2018-01-01 or 12th Oct 2018),2018-10-12
+C:\Users\IA-Intern\Desktop\regex-datetime\README.md,README.md,YYYY_mm_dd_3,7,2018-01-01,46,56,10,74,- run `regex_datetime.py` to find dates (like 2018-01-01 or 12th Oct 2018),2018-01-01
+C:\Users\IA-Intern\Desktop\regex-datetime\README.md,README.md,mmm_YYYY,14,january 2019,19,31,12,32,- find month-year (january 2019),2019-01-20
