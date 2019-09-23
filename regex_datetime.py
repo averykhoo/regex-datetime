@@ -225,7 +225,7 @@ def parse_txt(path):
         return os.path.basename(path), f.readlines()
 
 
-def regex_text(text, longest=True, context_max_len=999):
+def regex_text(text, longest=True, context_max_len=999, dayfirst=True):
     # join multiple spaces, convert tabs, strip leading/trailing whitespace
     text = ' '.join(text.split())
     matches = []
@@ -251,17 +251,17 @@ def regex_text(text, longest=True, context_max_len=999):
                     if 'HH' in regex_label:
                         if 'dd' in regex_label or 'YYYY' in regex_label:
                             matched_text = re.sub(r'[\\]', '/', m.group())
-                            parsed_date = dateutil.parser.parse(matched_text)
+                            parsed_date = dateutil.parser.parse(matched_text, dayfirst=dayfirst)
                         else:
                             matched_text = re.sub(r'H(?:(?:OU)?RS?)?', '', m.group(), flags=re.I)
                             matched_text = re.sub(r'MN', r'AM', matched_text, flags=re.I)
                             matched_text = re.sub(r'NN', r'PM', matched_text, flags=re.I)
                             matched_text = re.sub(r'(\d)[. ](\d)', r'\1:\2', matched_text)
                             matched_text = f'2001-01-01 {matched_text}'
-                            parsed_date = dateutil.parser.parse(matched_text).time()
+                            parsed_date = dateutil.parser.parse(matched_text, dayfirst=dayfirst).time()
                     elif 'dd' in regex_label or 'YYYY' in regex_label:
                         matched_text = re.sub(r'[\\]', '/', m.group())
-                        parsed_date = dateutil.parser.parse(matched_text).date()
+                        parsed_date = dateutil.parser.parse(matched_text, dayfirst=dayfirst).date()
             except ValueError:
                 pass
 
