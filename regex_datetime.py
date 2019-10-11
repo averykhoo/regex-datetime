@@ -60,7 +60,7 @@ REGEX_PARTS = {
                r"SAT(?:URDAY)?|SAB(?:TU)?|"
                r"SUN(?:DAY)?|AHA?D|MIN(?:GGU)?"
                r")",
-    'th':      r"(?:ST|ND|RD|TH)",
+    'th':      r"(?:ST|ND|RD|TH|º)",
 }
 REGEX_PATTERNS_PARSERS = {
 
