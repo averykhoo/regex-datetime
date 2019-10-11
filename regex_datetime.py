@@ -64,7 +64,7 @@ REGEX_PARTS = {
 }
 REGEX_PATTERNS_PARSERS = {
 
-    # 14/8/1991  # WARNING! dateutil can parse this wrong
+    # 14/8/1991
     'dd_mm_YYYY_1':          r"(?:{d}/{m}/{Y})",
     'dd_mm_YYYY_2':          r"(?:{d}\\{m}\\{Y})",
     'dd_mm_YYYY_3':          r"(?:{d}[-]{m}[-]{Y})",
@@ -73,7 +73,7 @@ REGEX_PATTERNS_PARSERS = {
     'dd_mm_YYYY_6':          r"(?:{d} ?{m} ?{Y})",
     'dd_mm_YYYY_7':          r"(?:{dz}{mz}{Y})",
 
-    # 14/8/91  # WARNING! dateutil can parse this wrong
+    # 14/8/91
     'dd_mm_yy_1':            r"(?:{d}/{m}/{y})",
     'dd_mm_yy_2':            r"(?:{d}\\{m}\\{y})",
     'dd_mm_yy_3':            r"(?:{d}[-]{m}[-]{y})",
@@ -97,7 +97,7 @@ REGEX_PATTERNS_PARSERS = {
     # 14th Aug
     'dd_mmm':                r"(?:{d}{th}? ?[/\\. -] ?{B})",
 
-    # 08/14/1991
+    # 08/14/1991  # WARNING! dateutil set to day first
     'mm_dd_YYYY_1':          r"(?:{m}/{d}/{Y})",
     'mm_dd_YYYY_2':          r"(?:{m}\\{d}\\{Y})",
     'mm_dd_YYYY_3':          r"(?:{m}[-]{d}[-]{Y})",
@@ -105,7 +105,7 @@ REGEX_PATTERNS_PARSERS = {
     'mm_dd_YYYY_5':          r"(?:{m}\.{d}\.{Y})",
     'mm_dd_YYYY_6':          r"(?:{mz}{dz}{Y})",
 
-    # 8/14/91
+    # 8/14/91  # WARNING! dateutil set to day first
     'mm_dd_yy_1':            r"(?:{m}/{d}/{y})",
     'mm_dd_yy_2':            r"(?:{m}\\{d}\\{y})",
     'mm_dd_yy_3':            r"(?:{m}[-]{d}[-]{y})",
