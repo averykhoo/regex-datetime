@@ -1,7 +1,7 @@
-# regex-datetime
+#   regex-datetime
 use regex (`re`) and `dateutil` to find datetimes in text
 
-## notes
+##  notes
 -   run `constants.py` to build regex for months/days/etc
     -   contains english and bahasa words for months/days
     -   should be straightforward to add more languages
@@ -11,3 +11,7 @@ use regex (`re`) and `dateutil` to find datetimes in text
 
 -   datetime parsed via dateutil 
     -   not super accurate, maybe i should try `arrow`/`moment`/`maya`/`delorean`/`dateparser`
+
+##  todo
+-   use named capturing patterns
+    -   use named groups to rebuild datetime, don't use dateutil
