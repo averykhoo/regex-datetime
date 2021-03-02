@@ -199,8 +199,8 @@ REGEX_FORMATTED = {label: '\\b' +
                    for label, pattern in REGEX_PATTERNS_PARSERS.items()}
 
 # match emails and urls to avoid returning chunks of them
-REGEX_FORMATTED['eml'] = r'''[a-zA-Z0-9][^\s`!@%$^={}\[\]/\\"',()<>:;]+@[a-zA-Z0-9][-_a-zA-Z0-9~.]+\.[a-zA-Z]{2,15}'''
-REGEX_FORMATTED['url'] = r'\b(?:(?:https?|ftp|file)://|www\.|ftp\.)[-A-Z0-9+&@#/%=~_|$?!:,.]*[A-Z0-9+&@#/%=~_|$]'
+REGEX_FORMATTED['eml'] = r'''[a-zA-Z0-9][^\s`!@%$^={}\[\]/\\"',()<>:;]+(?:@|%40|\s+at\s+|\s*<\s*at\s*>\s*)[a-zA-Z0-9][-_a-zA-Z0-9~.]+\.[a-zA-Z]{2,15}'''
+REGEX_FORMATTED['url'] = r'\b(?:(?:https?|ftp|file)://|www\d?\.|ftp\.)[-A-Z0-9+&@#/%=~_|$?!:,.]*[A-Z0-9+&@#/%=~_|$]'
 REGEX_FORMATTED['dot'] = r'(?:\d+\.){3,}\d+'
 
 # compile all the regex patterns
