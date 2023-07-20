@@ -2,6 +2,7 @@
 *   use regex (`re`) and `dateutil` to find datetimes in text
 *   you almost certainly want to use a real library like `ctparse` or `dateparser` instead
 *   does not support date ranges (e.g. "12-15 May 2021")
+*   does not support time ranges (e.g. "1200-1530pm")
 *   does not support month-only references (e.g. "March 2019")
 *   does not support quarter-year references (e.g. "Q1 FY 2001")
 
